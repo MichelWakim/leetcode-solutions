@@ -1,9 +1,3 @@
 # Write your MySQL query statement below
-SELECT stock_name, SUM(
-    CASE
-        WHEN operation = 'Buy' THEN -price
-        ELSE price
-    END
-) AS capital_gain_loss
-FROM Stocks
-GROUP BY stock_name
+select distinct stock_name, sum(case when operation = 'Buy' then -price else price end) over (partition by stock_name) capital_gain_loss
+from stocks
