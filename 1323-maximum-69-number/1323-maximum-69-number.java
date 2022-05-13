@@ -1,8 +1,11 @@
 class Solution {
     public int maximum69Number (int num) {
-        return Integer.parseInt(
-            // convert int to string and replace the first 6 left by 9 
-            String.valueOf(num).replaceFirst("6", "9")
-        );
+        for (int factor = 3; factor >= 0; factor --){
+            int value = (int) (num / Math.pow(10, factor));
+            if (value == 6 || value % 10 == 6) {
+                return num + (int) (3 * Math.pow(10, factor));
+            }
+        }
+        return num;
     }
 }
