@@ -1,22 +1,22 @@
 class Solution {
     public int nearestValidPoint(int x, int y, int[][] points) {
-        double min = Double.MAX_VALUE;
-        int index = -1;
-        
-        for(int i = 0; i< points.length; i++) {
-            int diffX = points[i][0] - x,
-                diffY = points[i][1] - y;
-            double distance = diffX == 0 || diffY == 0
-                ? Math.sqrt(
-                    Math.pow(diffX, 2) 
-                    + Math.pow(diffY, 2) 
-                ): min;
-            
-            if(distance < min){
-                min = distance;
-                index = i;
+        int min = Integer.MAX_VALUE, ans = -1, idx = -1;
+	    for (int[] point : points) {
+            idx++;
+            if (point[0] == x || point[1] == y) {
+                int dist = distance(x, y, point[0], point[1]);
+                if (dist < min) {
+                    min = dist;
+                    ans = idx;
+                }
             }
         }
-        return index;
+
+	    return ans;
+    }
+
+    // O(1)
+    public int distance(int x1, int y1, int x2, int y2) {
+        return Math.abs(x1 - x2) + Math.abs(y1 - y2);
     }
 }
