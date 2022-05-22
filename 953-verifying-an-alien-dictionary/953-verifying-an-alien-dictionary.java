@@ -18,6 +18,7 @@ class Solution {
                     break;
                 } 
             }
+            
             if(same && a.length() > b.length()){
                return false;
             }
