@@ -4,11 +4,15 @@ class Solution {
         
         int[] charsMap = new int['z'-'a'+1];
 
-        for(int i = 0; i < s.length(); i++) {
-            int idx = s.charAt(i) - 'a';
-            charsMap[idx] ++;
-            idx = t.charAt(i) - 'a';
-            charsMap[idx] --;
+        
+        for(char c: s.toCharArray()) {
+            int pos = c - 'a';
+            charsMap[pos]++;
+        }
+
+        for(char c: t.toCharArray()) {
+            int pos = c - 'a';
+            charsMap[pos]--;
         }
 
         for(int count: charsMap) {
