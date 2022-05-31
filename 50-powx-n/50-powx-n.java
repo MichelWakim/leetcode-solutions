@@ -1,7 +1,11 @@
 class Solution {
     public double myPow(double x, int n) {
         
-               if(n < 0){
+        /*
+            Explaination:
+            https://leetcode.com/problems/powx-n/discuss/1625042/JAVA-C%2B%2B-%3A-Simple-or-Olog(n)-or-Easy-or-Faster-than-100-or-Explained
+        */
+        if(n < 0){
             n = -n;
             x = 1 / x;
         }
