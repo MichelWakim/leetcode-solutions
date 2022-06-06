@@ -12,6 +12,9 @@ class Solution {
         
 //         return true;
         
+        /*
+            the array is faster and almost same space
+        */
         int[] alphabetsCounter = new int[26];
         
         for (char letter : magazine.toCharArray())
