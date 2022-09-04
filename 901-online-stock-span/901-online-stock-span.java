@@ -1,4 +1,6 @@
 class StockSpanner {
+    
+    //https://leetcode.com/problems/online-stock-span/discuss/640648/Clean-Java-Stack-solution-with-explanation.-90-better-run-time
 //    Initialize a stack with int array.
 //      First Index would be price, and
 //      Second Index Will be span at that price.
