@@ -7,6 +7,7 @@ class Solution {
                 nums[i] = (nums[i] + nums[i + 1]) % 10;
             n--;
         }
+        
         return nums[0];
     }
 }
