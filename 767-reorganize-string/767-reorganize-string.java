@@ -1,22 +1,31 @@
 class Solution {
     public String reorganizeString(String s) {
         // TC : O(n), SC : O(n)
-
-        // calculate the count of characters
-        int[] hash = new int[26];
-        for(char ch : s.toCharArray())
-            hash[ch-'a']++;
         
-        // find the max
         int max = 0;
         char maxCh = 'a';
 
-        for(int i=0;i<26;i++) {
-            if(hash[i] > max) {
-                max = hash[i];
-                maxCh = (char)(i+'a');
+        // calculate the count of characters
+        int[] hash = new int[26];
+        for(char ch : s.toCharArray()) {
+            hash[ch-'a']++;
+            
+            // find the max
+            if(hash[ch-'a'] > max) {
+                max = hash[ch-'a'];
+                maxCh = ch;
             }
         }
+            
+        
+        
+
+        // for(int i=0;i<26;i++) {
+        //     if(hash[i] > max) {
+        //         max = hash[i];
+        //         maxCh = (char)(i+'a');
+        //     }
+        // }
         
         int n = s.length();
 
