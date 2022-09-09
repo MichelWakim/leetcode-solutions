@@ -16,16 +16,6 @@ class Solution {
                 maxCh = ch;
             }
         }
-            
-        
-        
-
-        // for(int i=0;i<26;i++) {
-        //     if(hash[i] > max) {
-        //         max = hash[i];
-        //         maxCh = (char)(i+'a');
-        //     }
-        // }
         
         int n = s.length();
 
