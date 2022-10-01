@@ -9,7 +9,7 @@ class Solution {
         for (int length = lowLen; length < highLen + 1; ++length) {
             for (int start = 0; start < n - length; ++start) {
                 int num = Integer.parseInt(sample.substring(start, start + length));
-                if(num > high) break;
+                if (num > high) break;
                 if (num >= low) nums.add(num);
              }
         }
