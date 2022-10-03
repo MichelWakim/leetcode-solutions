@@ -2,6 +2,7 @@ class Solution {
     public long maximumBooks(int[] books) {
         // Explaination
         // https://leetcode.com/problems/maximum-number-of-books-you-can-take/discuss/2358714/Java-or-Stack-%2B-DP-or-Find-That-Bottleneck-or-Explanations-and-Proof-or-Comments-while-I-was-coding
+        // https://leetcode.com/problems/maximum-number-of-books-you-can-take/discuss/2508360/Java-O(n)-DP-%2B-Monotonic-Stack-oror-Beats-73-time-and-space-oror-Explanation-with-comments
         long[] dp = new long[books.length];
         Deque<Integer> stack = new ArrayDeque<>();
         for (int i = 0; i < books.length; i++){
