@@ -1,7 +1,7 @@
 class Solution {
     public String convertToBase7(int num) {
         int sign = 1;
-        int digit = 0;
+        int digit = 1;
         int answer = 0;
 
         
@@ -12,8 +12,9 @@ class Solution {
         
         
         while (num > 0) {
-            int n = (num % 7) * (int) Math.pow(10, digit++);
-            answer += n;
+            // int n = (num % 7) * digit;
+            answer += (num % 7) * digit;
+            digit *= 10;
             num /= 7;
         }
         
