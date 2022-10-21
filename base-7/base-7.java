@@ -4,15 +4,12 @@ class Solution {
         int digit = 1;
         int answer = 0;
 
-        
         if(num < 0) {
             sign = -1;
             num *= -1;
         }
-        
-        
+         
         while (num > 0) {
-            // int n = (num % 7) * digit;
             answer += (num % 7) * digit;
             digit *= 10;
             num /= 7;
